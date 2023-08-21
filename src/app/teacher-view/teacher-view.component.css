@@ -1,0 +1,11 @@
+.linkstyle{
+    border: 1px solid skyblue;
+    text-decoration: none;
+    padding: 8px;
+    border-radius: 5px;
+    background-color: blue;
+    color: black;
+    float: right;
+    margin-right: 20px;
+    cursor: pointer;
+}

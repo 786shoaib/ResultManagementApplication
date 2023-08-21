@@ -1,0 +1,23 @@
+.login{
+    margin-top: 110px;
+    margin-left: 25%;
+    width: 50%;
+    height: 50%; 
+}
+
+h2{
+    text-align: center;
+}
+.btnstyle{
+    text-decoration: none;
+    color: black;
+}
+button{
+    margin: 30px;
+    background-color:skyblue;
+    padding: 8px 25px 8px 25px;
+    color: black;
+    margin-right: 50px;
+    border-radius: 10px;
+}
+

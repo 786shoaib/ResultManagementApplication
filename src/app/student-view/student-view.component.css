@@ -1,0 +1,12 @@
+.btnstyle{
+    text-decoration: none;
+    color: black;
+}
+button{
+    margin: 30px;
+    /* background-color:skyblue; */
+    padding: 8px 25px 8px 25px;
+    /* color: black; */
+    margin-right: 50px;
+    border-radius: 10px;
+}

@@ -1,0 +1,78 @@
+<br>
+<div class="d-flex">
+  <button type="button" style="margin-left: 15px;" (click)="clickAddEmployee()" class="btn btn-primary"
+    data-bs-toggle="modal" data-bs-target="#exampleModal">Add
+    Record</button>
+  <button (click)="logout()" class="btn btn-danger" style="margin-left: 1050px;">Logout</button>
+</div>
+<br>
+<h2 style="margin-left: 15px;">Total Records : {{getRecordCount()}} </h2>
+<br>
+<div class="container">
+  <table class="table table-bordered border-dark">
+    <thead style="background-color: gray;">
+      <tr>
+        <th scope="col">Roll No.</th>
+        <th scope="col">Name</th>
+        <th scope="col">Date of Birth</th>
+        <th scope="col">Score</th>
+        <th scope="col">Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let row of studentData">
+        <td>{{row.rollno}}</td>
+        <td>{{row.name}}</td>
+        <td>{{row.dob}}</td>
+        <td>{{row.score}}</td>
+        <td>
+          <button type="button" (click)="onEdit(row)" data-bs-toggle="modal" data-bs-target="#exampleModal"
+            class="btn btn-primary">Edit</button>
+          <button type="button" (click)="deleteUser(row)" class="btn btn-danger mx-3">Delete</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+
+
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title" *ngIf="showAdd" id="exampleModalLabel">Add new Result</h1>
+        <h1 class="modal-title" *ngIf="showUpdate" id="exampleModalLabel">Update Details</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form [formGroup]="formValue">
+          <div class="mb-3" *ngIf="showAdd">
+            <label for="rollno" class="form-label">Roll No.</label>
+            <input type="number"  formControlName="rollno" minlength="5" maxlength="10" class="form-control" id="rollno" aria-describedby="rollno"
+              placeholder="Enter roll number">
+          </div>
+          <div class="mb-3">
+            <label for="name" class="form-label">Name</label>
+            <input type="text" formControlName="name" minlength="2" maxlength="30" class="form-control" id="name" placeholder="Enter name ">
+          </div>
+          <div class="mb-3">
+            <label for="dob" class="form-label">Date Of Birth</label>
+            <input type="date" formControlName="dob" class="form-control" id="name" placeholder="Enter DOB(yyyy-mm-dd)">
+          </div>
+          <div class="mb-3">
+            <label for="score" class="form-label">Score</label>
+            <input type="number" formControlName="score" [min]="100" [max]="500" class="form-control" id="score" placeholder="Enter score">
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" id="cancel" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" *ngIf="showAdd" (click)="postUserDetails()" class="btn btn-primary">Add</button>
+        <button type="button" *ngIf="showUpdate" (click)="updateUserDetails()" class="btn btn-primary">Update</button>
+      </div>
+    </div>
+  </div>
+</div>

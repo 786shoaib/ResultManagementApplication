@@ -1,0 +1,45 @@
+{
+  "posts": [
+    {
+      "id": 6,
+      "rollno": 1809113066,
+      "name": "Usman",
+      "dob": "2022-03-03",
+      "score": 500
+    },
+    {
+      "id": 7,
+      "rollno": 1809113097,
+      "name": "Shirish Sharma",
+      "dob": "2022-03-03",
+      "score": 350
+    },
+    {
+      "id": 8,
+      "rollno": 1809113065,
+      "name": "Mohd Shoaib",
+      "dob": "2018-01-01",
+      "score": 79
+    },
+    {
+      "id": 9,
+      "rollno": 1809113082,
+      "name": "Rahul",
+      "dob": "1999-11-05",
+      "score": 450
+    }
+  ],
+  "loginTeachers": [
+    {
+      "email": "shoaib@gmail.com",
+      "password": "shoaib123"
+    },
+    {
+      "email": "zaid@gmail.com",
+      "password": "zaid123"
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}

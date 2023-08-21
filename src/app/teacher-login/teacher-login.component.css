@@ -1,0 +1,22 @@
+.card{
+    border: none;
+    width: 500px;
+    padding: 40px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background: rgb(26, 37, 44);
+    background: linear-gradient(90deg,rgb(26, 37, 44) 0%,rgb(26, 37, 44) 100%);
+}
+
+.card h1{
+    color: white;
+}
+
+.card h5{
+    color: whitesmoke;
+}
+label{
+    color: white;
+}
